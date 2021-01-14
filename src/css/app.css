@@ -1,0 +1,242 @@
+/* Custom color theme properties */
+:root {
+  --f7-theme-color: #4d4d4d;
+  --f7-theme-color-rgb: 77, 77, 77;
+  --f7-theme-color-shade: #393939;
+  --f7-theme-color-tint: #616161;
+}
+
+/* Invert navigation bars to fill style */
+:root,
+:root.theme-dark,
+:root .theme-dark {
+  --f7-bars-bg-color: var(--f7-theme-color);
+  --f7-bars-bg-color-rgb: var(--f7-theme-color-rgb);
+  --f7-bars-translucent-opacity: 0.9;
+  --f7-bars-text-color: #fff;
+  --f7-bars-link-color: #fff;
+  --f7-navbar-subtitle-text-color: rgba(255,255,255,0.85);
+  --f7-bars-border-color: transparent;
+  --f7-tabbar-link-active-color: #fff;
+  --f7-tabbar-link-inactive-color: rgba(255,255,255,0.54);
+  --f7-sheet-border-color: transparent;
+  --f7-tabbar-link-active-border-color: #fff;
+}
+.appbar,
+.navbar,
+.toolbar,
+.subnavbar,
+.calendar-header,
+.calendar-footer {
+  --f7-touch-ripple-color: var(--f7-touch-ripple-white);
+  --f7-link-highlight-color: var(--f7-link-highlight-white);
+  --f7-button-text-color: #fff;
+  --f7-button-pressed-bg-color: rgba(255,255,255,0.1);
+}
+.navbar-large-transparent,
+.navbar-large.navbar-transparent {
+  --f7-navbar-large-title-text-color: #000;
+
+  --r: 77;
+  --g: 77;
+  --b: 77;
+  --progress: var(--f7-navbar-large-collapse-progress);
+  --f7-bars-link-color: rgb(
+    calc(var(--r) + (255 - var(--r)) * var(--progress)),
+    calc(var(--g) + (255 - var(--g)) * var(--progress)),
+    calc(var(--b) + (255 - var(--b)) * var(--progress))
+  );
+}
+.theme-dark .navbar-large-transparent,
+.theme-dark .navbar-large.navbar-transparent {
+  --f7-navbar-large-title-text-color: #fff;
+}
+
+/* Your app custom styles here */
+body{
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.page-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.page-content {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+.progressbar{
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.tab-link-active{
+  transform: scale(1.05);
+}
+
+.unit-active{
+  background: #4d4d4d;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white; 
+}
+
+.radial-gradient2 {
+  background-image: radial-gradient(ellipse at bottom,  #707070, #a0a0a0 50%, #a0a0a0);
+}
+.radial-gradient1 {
+  /* background-image: radial-gradient(ellipse at bottom,  #005fff, purple 50%, red); */
+  background-image: radial-gradient(ellipse at bottom, #50ffff, #37CEFA 30%, #0000ff);
+}
+.radial-gradient0 {
+  background-image: radial-gradient(ellipse at bottom, #ffbf00, orange 40%, red);
+}
+
+
+
+.demo-card-header-pic .card-header {
+  height: 32vw;
+  max-height: 140px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.demo-card-header-pic .card-content-padding .set {
+  color: #8e8e93;
+}
+
+.demo-card-header-pic .clkAction {
+  cursor: pointer;
+}
+.demo-card-header-pic .clkAction:hover {
+  text-decoration: underline;
+}
+
+
+.card-content {
+  height: 60px;
+}
+.card-content-padding h2 {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+.card-header {
+  display: block;
+  padding: 10px;
+}
+.card-footer {
+  background: #fafafa;
+}
+.theme-dark .card-footer {
+  background-color: transparent;
+}
+.card-footer a {
+  color: #2196f3;
+  /* color: #81848b; */
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.card-footer a:hover {
+  text-decoration: underline;
+}
+
+.card-content img {
+  display: block;
+}
+.card-content-padding {
+  padding: 15px 10px;
+}
+.card-content-padding .likes {
+  color: #8e8e93;
+}
+
+
+@keyframes blink {
+  0%, 45% {
+    opacity: 1;
+  }  
+  50%, 95% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink 1.5s linear infinite;
+}
+
+.temp, .humi, .set, .valv, .pump, .co2 {
+  font-family: 'Advent Pro';
+}
+.temp::after {
+  content: '°C';
+}
+.humi::after {
+  content:  ' %rH';
+}
+.co2::after {
+  content:  ' ppm';
+}
+.valv:after {
+  content:  '%';
+}
+.avg:before {
+  content:  '\00F8';
+}
+
+
+.schedule .list{
+  margin: 0px !important;
+}
+.schedule .range-bar{
+  margin-top: -14px !important;
+  height: 12px !important;
+}
+
+
+
+.schedule .range-knob{
+  display: none !important;
+}
+.sched2 .range-bar, .sched3 .range-bar{
+  background: none;
+}
+.sched2, .sched3{
+  margin-top: -20px;
+}
+.ios .sched2, .ios .sched3{
+  margin-top: -28px;
+}
+.schedule .disabled{
+  opacity: 1 !important;
+}
+.schedule .disabled .range-bar-active{
+  opacity: 0.55 !important;
+}
+
+:root {
+  --f7-popup-border-radius: 0px;
+  --f7-popup-tablet-width: 500px;
+  --f7-popup-tablet-height: 500px;
+  /*
+  --f7-popup-tablet-border-radius: var(--f7-popup-border-radius);
+  */
+}
+
+
+
+/* advent-pro-regular - latin */
+@font-face {
+  font-family: 'Advent Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/advent-pro-v10-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Advent Pro Regular'), local('AdventPro-Regular'),
+       url('../fonts/advent-pro-v10-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/advent-pro-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/advent-pro-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/advent-pro-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/advent-pro-v10-latin-regular.svg#AdventPro') format('svg'); /* Legacy iOS */
+}
