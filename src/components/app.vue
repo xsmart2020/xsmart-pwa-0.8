@@ -196,7 +196,7 @@
               this.data.polling = setInterval(function() {
                 this.request({
                   url: '/static/web/'+this.data.id+'/input.json',
-                  url: '/'+this.data.id+'/input.json',
+                  // url: '/'+this.data.id+'/input.json',
                   headers: { "authorization" : this.data.units[this.data.id].token },
                   success(data) {
                     window.$f7.data.input = JSON.parse(data);
@@ -289,8 +289,8 @@
         this.$f7.data.id = this.unit_id;
 
         this.$f7.request({
-          // url: '/static/web/jwt.txt',
-          url: '/jwt?id='+this.unit_id+'&plant='+this.plant,
+          url: '/static/web/jwt.txt',
+          // url: '/jwt?id='+this.unit_id+'&plant='+this.plant,
 
           statusCode: {
             401: function (xhr) {
