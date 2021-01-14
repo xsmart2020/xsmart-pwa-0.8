@@ -98,7 +98,7 @@
           
           <f7-block style="margin:20px auto; width:80%">
 
-            <f7-row v-for="n in 6" :key="n" @click="openPopup(n)" style="margin-bottom:5px; height:32px">
+            <f7-row v-for="n in 6" :key="n" @click="openPopup(n)" style="margin-bottom:5px; height:32px; cursor:pointer">
               <f7-block-title style="margin:0 0 5px">{{ $t("message.dows["+n+"]") }}</f7-block-title>
               <f7-range class="sched1 color-blue" 
                 :min="0" :max="24" :step="0.5" :dual="true" 
@@ -114,7 +114,7 @@
               </f7-range>
             </f7-row>
 
-            <f7-row @click="openPopup(7)" style="height:32px">
+            <f7-row @click="openPopup(7)" style="height:32px; cursor:pointer">
               <f7-block-title style="margin:0 0 5px">{{ $t("message.dows[7]") }}</f7-block-title>
               <f7-range class="sched1 color-blue" 
                 :min="0" :max="24" :step="0.5" :dual="true" :scale="true" :scale-steps="4" :scale-sub-steps="0" 
@@ -146,7 +146,7 @@
           <f7-navbar>
             <f7-nav-title>{{ $t('message.schedule') }} {{ room(n-1,$f7.data.input).schedule }}</f7-nav-title>
             <f7-nav-right>
-              <f7-link popup-close="#set2-schedule-room"><f7-icon material="clear"></f7-icon></f7-link>
+              <f7-link popup-close="#set2-schedule-room"  @click="$forceUpdate()"><f7-icon material="clear"></f7-icon></f7-link>
             </f7-nav-right>
           </f7-navbar>
          
